@@ -1,0 +1,73 @@
+{
+    "society": [
+        {
+            "name": "33СРЗ",
+            "nalog": [
+                {
+                    "programName": "1C",
+                    "connection": "link",
+                    "distribution": "link"
+                },
+                {
+                    "programName": "1C TEST",
+                    "connection": "link",
+                    "distribution": "link"
+                }
+            ],
+            "buh": [
+                {
+                    "programName": "1C",
+                    "connection": "link",
+                    "distribution": "link"
+                },
+                {
+                    "programName": "1C TEST",
+                    "connection": "link",
+                    "distribution": "link"
+                }
+            ]
+        },
+        {
+            "name": "Алмаз",
+            "nalog": [
+                {
+                    "programName": "1C buh",
+                    "connection": "link",
+                    "distribution": "link"
+                },
+                {
+                    "programName": "1C TEST",
+                    "connection": "link",
+                    "distribution": "link"
+                }
+            ],
+            "buh": [
+                {
+                    "programName": "1C buh",
+                    "connection": "link",
+                    "distribution": "link"
+                },
+                {
+                    "programName": "1C TEST",
+                    "connection": "link",
+                    "distribution": "link"
+                }
+            ]
+        },
+        {
+            "name": "Пролетарка",
+            "nalog": [
+                {
+                    "programName": "1C",
+                    "connection": "link",
+                    "distribution": "link"
+                },
+                {
+                    "programName": "1C TEST",
+                    "connection": "link",
+                    "distribution": "link"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+<button *ngIf="currentStep !== Steps.START" class="back" (click)="back()">🠔 Назад</button>
+
+<div *ngIf="currentStep === Steps.START" class="actions">
+    <button (click)="showNalogList()">
+        Налоговый мониторинг
+    </button>
+
+    <button (click)="showBuhList()">
+        Бухгалтерский и управленческий учет
+    </button>
+</div>
+
+<div *ngIf="nalogList.length > 0 && currentStep === Steps.NALOG">
+    <h2>Налоговый мониторинг</h2>
+    <ol class="list">
+        <li *ngFor="let item of nalogList">
+            <button (click)="showProgram(item.name, 'nalog')">{{ item.name }}</button>
+        </li>
+    </ol>
+</div>
+
+<div *ngIf="buhList.length > 0 && currentStep === Steps.BUH">
+    <h2>Бухгалтерский и управленческий учет</h2>
+    <ol class="list">
+        <li *ngFor="let item of buhList">
+            <button (click)="showProgram(item.name, 'buh')">{{ item.name }}</button>
+        </li>
+    </ol>
+</div>
+
+<div *ngIf="selectedProgram && currentStep === Steps.INFO">
+    <h2>Ссылки для подключения ({{ nameCompany }})</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Базы ДЗО</th>
+                <th>для подключения</th>
+                <th>дистрибутив</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let program of selectedProgram">
+                <td>{{ program.programName }}</td>
+                <td><a [href]="program.connection">Открыть</a></td>
+                <td><a [href]="program.distribution">Скачать</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div *ngIf="!selectedProgram && currentStep === Steps.INFO">
+    <h2>Ссылки для подключения ({{ nameCompany }})</h2>
+    <p>Данных нет</p>
+</div>
